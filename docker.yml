@@ -1,20 +1,19 @@
 ---
-- name: first playbook
-  hosts: prod
-  become: true
-  tasks:
-    - name: install python pip
-      yum:
-        name : python-pip
-        state: present
-    - name: install docker-py python module
-      pip:
-        name: docker-py
-        state: present
-    - name: start the container
-      docker_container:
-        name: tomcat
-        image: "pavithraprakruthi/tomcat2:0.0.3"
-        state: started
-        published_ports:
+  -hosts: prod
+   become: true
+   tasks:
+     - name: install python pip
+       yum:
+         name : python-pip
+         state: present
+     - name: install docker-py python module
+       pip:
+         name: docker-py
+         state: present
+     - name: start the container
+       docker_container:
+         name: pavi
+         image: "pavithraprakruthi/tomcat2:0.0.3"
+         state: started
+         published_ports:
           - 0.0.0.0:8080:8080
