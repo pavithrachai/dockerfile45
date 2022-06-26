@@ -1,6 +1,6 @@
 ---
 - name: first playbook
-  hosts: sec2
+  hosts: prod
   become: true
   tasks:
     - name: install python pip
