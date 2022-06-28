@@ -13,7 +13,7 @@
      - name: start the container
        docker_container:
          name: pavi
-         image: "pavithraprakruthi/tomcat2:0.0.3"
+         image: "pavithraprakruthi/tomcat2:0.0.8"
          state: started
          published_ports:
           - 0.0.0.0:8080:8080
